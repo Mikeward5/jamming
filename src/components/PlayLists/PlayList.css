@@ -1,0 +1,12 @@
+.PlayList {
+    height: 500px;
+    width: 400px;
+    color: black;
+    background-color: #ffff;
+}
+
+.Innerbox {
+    background-color: blue;
+    color: red;
+
+}

@@ -4,3 +4,8 @@ body {
 
 }
 
+.Seperate {
+  display: flex;
+  justify-content: space-around;
+}
+
