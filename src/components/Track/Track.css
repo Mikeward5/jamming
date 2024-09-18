@@ -9,3 +9,9 @@
     padding: 0px 10px;
 }
 
+.button {
+    position: relative;
+    float: right;
+    bottom: 40px;
+}
+
