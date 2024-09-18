@@ -7,7 +7,7 @@ function PlayList() {
         <>
         <div className='PlayList'>
             <h1>Search Results</h1>
-            <div className='Innerbox'>
+            <div className='PlayInnerbox'>
             <h2>Written word</h2>
         </div>
         </div>

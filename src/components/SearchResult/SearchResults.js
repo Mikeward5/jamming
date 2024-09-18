@@ -7,7 +7,7 @@ function SearchResults() {
         <>
         <div className='SearchResult'>
             <h1>Search Results</h1>
-            <div className='Innerbox'>
+            <div className='SearchInnerbox'>
             <h2>Written word</h2>
         </div>
         </div>
