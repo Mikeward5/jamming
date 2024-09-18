@@ -2,17 +2,15 @@ import React from 'react';
 import './SearchResults.css';
 import Track from '../Track/Track';
 
-function SearchResults() {
-    const array = [{name: 'Aliens Exist', album: 'Anthem', artist: 'blink182', id: 1}, 
-        {name: 'ShutUp', album: 'Anthem', artist: 'blink182', id: 2}]
+function SearchResults(props) {
     return (
         <>
         <div className='SearchResult'>
             <h1>Search Results</h1>
             {
-            array.map(array => {
+            props.tracks.map(array => {
             return (
-            <Track key={array.id} name={array.name} album={array.album} artist={array.artist}/>
+            <Track name={array.name} album={array.album} artist={array.artist} key={array.id} />
             )
             })
         }
