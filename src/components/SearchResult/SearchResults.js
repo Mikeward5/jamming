@@ -8,9 +8,9 @@ function SearchResults(props) {
         <div className='SearchResult'>
             <h1>Search Results</h1>
             {
-            props.tracks.map(array => {
+            props.tracks.map(track => {
             return (
-            <Track name={array.name} album={array.album} artist={array.artist} key={array.id} />
+            <Track tracks={track} key={track.id} handleTrackAction={props.addToPlayList} />
             )
             })
         }

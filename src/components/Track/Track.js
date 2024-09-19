@@ -6,10 +6,10 @@ function Track(props) {
 
     return (
         <div className="TrackInnerbox">
-            <h3>{props.name}</h3>
-            <p>{props.album} | {props.artist}</p>
+            <h3>{props.tracks.name}</h3>
+            <p>{props.tracks.album} | {props.tracks.artist}</p>
             <div>
-                <button className="button" onClick={props.handleClick}> + </button>
+                <button className="button" onClick={()=> props.handleTrackAction(props.tracks)}> + </button>
             </div>
         </div>
         

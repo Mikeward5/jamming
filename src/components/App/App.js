@@ -9,13 +9,13 @@ const musicArray = [
   name: 'Aliens Exist', 
   album: 'Anthem', 
   artist: 'blink182', 
-  id: 1,
+  
 },
 {
   name: 'Shutup', 
   album: 'Anthem', 
   artist: 'blink182', 
-  id: 2,
+  
 },
 ];
 
@@ -26,6 +26,25 @@ function App() {
   setSearchInput(musicArray)
   }
 
+  
+  const [playList, setPlayList] = useState([]);
+
+  function addToPlayList(track) {
+    setPlayList((oldItem) => {
+      if(oldItem.includes(track)) {
+        return oldItem;
+      } else {
+        return [...oldItem, track];
+      }
+    });
+  }
+
+  function removeFromPlayList(track) {
+    setPlayList((oldItem) => oldItem.filter(t => t !== track))
+  }
+
+
+
   return (
     <>
     <div className="body">
@@ -35,9 +54,9 @@ function App() {
       <SearchBar />
     </div>
     <div className="Seperate">
-      <SearchResults tracks={search} />
+      <SearchResults tracks={search} addToPlayList={addToPlayList} />
 
-      <PlayList />
+      <PlayList tracks={playList} removeFromPlayList={removeFromPlayList}/>
      
     </div>
     </>

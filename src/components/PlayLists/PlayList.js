@@ -7,7 +7,13 @@ function PlayList(props) {
         <>
         <div className='PlayList'>
             <h1>PlayList</h1>
-            <Track />           
+            {
+             props.tracks.map(track => {
+             return (
+                <Track tracks={track} key={track.id} handleTrackAction={props.removeFromPlayList}/> 
+             )
+            })      
+}
         </div>
         </>
     )
